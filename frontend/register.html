@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Batalla Naval</title>
+</head>
+<body data-page="register">
+    <section class="login-register-section">
+        <h1>BATALLA NAVAL</h1>
+        <form class="cards login-register-card">
+            <span class="login-register-title">BIENVENIDO</span>
+            <div class="all-inputs-session">
+                <div class="input-session">
+                    <span class="input-session-texts">EMAIL</span>
+                    <input type="email" name="email" id="inputEmailRegister" required placeholder="juanperez@ejemplo.com">
+                </div>
+                <div class="input-session">
+                    <span class="input-session-texts">NOMBRE DE USUARIO</span>
+                    <input type="text" name="username" id="inputUsernameRegister" required placeholder="juanperez123">
+                </div>
+                <div class="input-session">
+                    <span class="input-session-texts">CONTRASEÑA</span>
+                    <input type="password" name="password" id="inputPasswordRegister" required>
+                </div>
+                <div class="input-session">
+                    <span class="input-session-texts">CONFIRMAR CONTRASEÑA</span>
+                    <input type="password" name="repeatPassword" id="inputRepeatPasswordRegister" required>
+                    <span id="error-text"></span>
+                </div>
+            </div>
+            <div class="bottom-forms">
+                <button type="button" id="registerButton">REGISTRARSE</button>
+                <div class="footer-login-register">
+                    <span>¿Ya tienes una cuenta?</span>
+                    <a href="./index.html" id="toLogin">INICIAR SESIÓN</a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="./src/transition.js"></script>
+    <script type="module" src="./src/register.js"></script>
+</body>
+</html>

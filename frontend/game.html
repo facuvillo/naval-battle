@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/gameview-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" src="./src/games/gameLogic/UserInfoMock.js"></script>
+    
+    <h1>Jugando</h1>
+    <button id="give-up-button">RENDIRSE</button>
+    <div class="ship-list">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+    <div class="gameBoards" id="boards-container">
+        <div class="container-player-board">
+            <h2>Mi Tablero</h2>
+            <div class="gameBoard" id="player-board"></div>
+        </div>
+        <div class="container-opponent-board">
+            <h2>Tablero del Oponente</h2>
+            <div class="gameBoard" id="opponent-board"></div>
+        </div>
+    </div>
+    <script type="module" src="./src/games/gameLogic/createGameBoards.js"></script>
+    <script type="module" src="./src/games/mqtt/game.js"></script>
+    <script type="module" src="./src/games/gameLogic/sendShot.js"></script>
+    <script type="module" src="./src/games/gameLogic/setShipsPosition.js"></script>
+    <script type="module" src="./src/games/gameLogic/giveUp.js"></script>
+</body>
+</html>

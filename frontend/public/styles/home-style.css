@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("../assets/ocean-backgorund-v2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    text-align: center;
+    padding: 2rem 20% 0 20%;
+    gap: 1rem;
+}
+
+.section-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+    max-width: 25rem;
+}
+
+/* Profile styles */
+
+.cards img {
+    width: 128px;
+    height: 128px;
+    align-self: center;
+}
+
+.cards span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0A3D62;
+    margin-top: 1rem;
+    display: block;
+}
+
+.profile-card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.profile-card-button {
+    cursor: pointer;
+    height: 42px;
+    background-color: #A3BFD9;
+    line-height: 42px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 21px;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.profile-card-button:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+.profile-card-button:active {
+    background-color: #849bb0;
+}
+
+
+/* Available games styles */
+
+.games-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.buttons-new-games{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 506px;
+}
+
+.new-game-btn{
+    cursor: pointer;
+    height: 42px;
+    background-color: #FAC898;
+    line-height: 42px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A3D62;
+    border: 0;
+    border-radius: 21px;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+.new-game-btn:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+.new-game-btn:active {
+    background-color: #f2c090;
+}
+
+.available-games{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.available-games-header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0A3D62;
+}
+.available-games-header > button{
+    width: 42px;
+    padding: 0;
+}
+
+.games-cards-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.games-cards-container > .cards {
+    max-width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-accept {
+    cursor: pointer;
+    height: 42px;
+    background-color: #27AE60;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 21px;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+.btn-accept:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+.btn-accept:active {
+    background-color: #1e874a;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/home-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BATALLA NAVAL</h1>
+    <div id="inviteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Invitar a un jugador</h2>
+            <ul id="onlinePlayersList"></ul>
+            <button class="new-game-btn" id="inviteBtn">INVITAR A JUGADOR</button>
+        </div>
+    </div>
+    <section class="section-profile">
+        <div class="cards">
+            <img src="./public/assets/astronaut.png" alt="astronauta" width="128" height="128">
+            <span id="username">USERNAME</span>
+            <span id="userId">#000000</span>
+            <div class="profile-card-buttons">
+                <button class="profile-card-button">PROFILE</button>
+                <button class="profile-card-button">SCOREBOARD</button>
+            </div>
+        </div>
+    </section>
+    <section class="games-section">
+        <div class="buttons-new-games">
+            <button class="new-game-btn" id="createGameBtn">CREAR PARTIDA</button>
+            <button class="new-game-btn">DESAFIAR A JUGADOR</button>
+        </div>
+        <div class="available-games">
+            <div class="available-games-header">
+                <h2>PARTIDAS DISPONIBLES</h2>
+                <button class="profile-card-button" id="refreshGames">R</button>
+            </div>
+            <div class="games-cards-container" id="games-cards-container">
+            </div>
+        </div>
+    </section>
+    <script type="module" src="./src/home.js"></script>
+</body>
+</html>

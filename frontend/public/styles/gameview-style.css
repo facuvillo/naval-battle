@@ -1,0 +1,131 @@
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("../assets/ocean-backgorund-v2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 5%;
+    gap: 2rem;
+    color: #0A3D62;
+}
+
+
+#boards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+    padding: 10px;
+    border: 3px solid #0a3d62;
+    border-radius: 12px;
+    background-color: rgba(0, 51, 102, 0.8);
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.container-player-board h2{
+    grid-column: span 10;
+    margin: 0 0 5px 0;
+    color: #27AE60;
+}
+
+.container-opponent-board h2 {
+    grid-column: span 10;
+    margin: 0 0 5px 0;
+    color: #E74C3C;
+}
+
+
+.cell {
+    width: 30px;
+    height: 30px;
+    background-color: #66a3ff;
+    
+    border: 1px solid #00509e;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+
+#player-board .cell {
+    background-color: #80c1ff;
+    cursor: default;
+}
+
+
+#opponent-board .cell {
+    
+    background-color: #cce5ff;
+}
+
+#opponent-board .cell:hover {
+    background-color: #32404f;
+}
+
+.notYourTurn {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+.my-ship-cell {
+    background-color: #878787 !important;
+    border-radius: 5px;
+}
+
+.hit {
+    background-color: #e74c3c !important;
+    position: relative;
+}
+
+.water-hit {
+    background-color: #3498db !important;
+    position: relative;
+}
+
+#give-up-button {
+    cursor: pointer;
+    height: 42px;
+    background-color: #E74C3C;
+    line-height: 42px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: 0;
+    border-radius: 21px;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: normal;
+    max-width: 200px;
+}
+
+#give-up-button:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+#give-up-button:active {
+    background-color: #bf4032;
+}

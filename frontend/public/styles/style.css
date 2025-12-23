@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: url("../assets/ocean-backgorund-v2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.login-register-section {
+    box-sizing: content-box;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1.5px);
+}
+
+.login-register-card {
+    gap: 32px;
+    color: #0A3D62;
+}
+
+.login-register-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.all-inputs-session {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.input-session {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4%;
+}
+
+.input-session-texts {
+    padding-left: 16px;
+}
+.input-session > input {
+    width: 20rem;
+    height: 32px;
+    padding: 5px 16px;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 2px solid #66666671;
+}
+
+.input-session>input:focus {
+    background-color: #00000005;
+    border-color: #326c94;
+    outline: none;
+}
+
+.bottom-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#loginButton {
+    cursor: pointer;
+    height: 42px;
+    background-color: #FAC898;
+    line-height: 42px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A3D62;
+    border: 0;
+    border-radius: 16px;
+}
+
+#loginButton:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+#loginButton:active {
+    background-color: #f2c090;
+}
+
+.footer-login-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.footer-login-register > a {
+    text-decoration: none;
+    font-weight: bold;
+    color:#0A3D62;
+}
+
+.footer-login-register > a:hover {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.25));
+    transition: 150ms;
+}
+
+#registerButton {
+    cursor: pointer;
+    height: 42px;
+    background-color: #FAC898;
+    line-height: 42px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A3D62;
+    border: 0;
+    border-radius: 16px;
+}
+
+#registerButton:hover {
+    box-shadow: 0 0 6.5px rgba(0, 0, 0, 0.25);
+    transition: 150ms;
+}
+
+#registerButton:active {
+    background-color: #f2c090;
+}
+
+body {
+    transition: opacity 0.3s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+#error-text {
+    height: 20px;
+    margin-top: 4px;
+    color: #E74C3C;
+    text-align: center;
+    font-size: 16px;
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(-5px);}
+    40% {transform: translateX(5px);}
+    60% {transform: translateX(-5px);}
+    80% {transform: translateX(5px);}
+    100% {transform: translateX(0);}
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Batalla Naval</title>
+</head>
+<body data-page="login">
+    <section class="login-register-section">
+        <h1>BATALLA NAVAL</h1>
+        <form class="cards login-register-card">
+            <span class="login-register-title">BIENVENIDO</span>
+            <div class="all-inputs-session">
+                <div class="input-session">
+                    <span class="input-session-texts">EMAIL</span>
+                    <input type="email" name="email" id="inputEmailLogin" required placeholder="juanperez@ejemplo.com">
+                </div>
+                <div class="input-session">
+                    <span class="input-session-texts">CONTRASEÑA</span>
+                    <input type="password" name="password" id="inputPasswordLogin" required>
+                    <span id="error-text"></span>
+                </div>
+            </div>
+            <div class="bottom-forms">
+                <button type="button" id="loginButton">INICIAR SESIÓN</button>
+                <div class="footer-login-register">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="./register.html" id="toRegister">REGISTRARSE</a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="./src/transition.js"></script>
+    <script type="module" src="./src/login.js"></script>
+</body>
+</html>
