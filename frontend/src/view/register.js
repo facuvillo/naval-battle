@@ -1,5 +1,5 @@
 import axios from "axios";
-import errorAnimation from "./errorAnimation.js";
+import errorAnimation from "../utils/errorAnimation.js";
 
 const inputEmail = document.getElementById("inputEmailRegister");
 const inputUsername = document.getElementById("inputUsernameRegister");

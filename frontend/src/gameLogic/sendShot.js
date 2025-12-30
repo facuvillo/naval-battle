@@ -1,5 +1,5 @@
-import { publishMessage } from "../mqtt/PublishMessage";
-import { client, baseTopic } from "../mqtt/game.js";
+import { publishMessage } from "../core/mqtt/PublishMessage";
+import { client, baseTopic } from "../core/mqtt/game.js";
 import { getUserInfo } from "./UserInfoMock.js";
 
 const cells = document.querySelectorAll(".opponent-cell");

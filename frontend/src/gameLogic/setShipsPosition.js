@@ -1,37 +1,37 @@
-import { publishMessage } from "../mqtt/PublishMessage.js";
-import { client, baseTopic } from "../mqtt/game.js";
-import { getUserInfo } from "./UserInfoMock.js";
+import { publishMessage } from "../core/mqtt/PublishMessage.js";
+import { client, baseTopic } from "../core/mqtt/game.js";
+import { getUserInfo } from "../gameLogic/UserInfoMock.js";
 
 const userInfo = getUserInfo();
 
 const shipsData = [
-  // {
-  //   type: "CARRIER",
-  //   positions: [
-  //     { x: 0, y: 0 },
-  //     { x: 0, y: 1 },
-  //     { x: 0, y: 2 },
-  //     { x: 0, y: 3 },
-  //     { x: 0, y: 4 },
-  //   ],
-  // },
-  // {
-  //   type: "BATTLESHIP",
-  //   positions: [
-  //     { x: 2, y: 1 },
-  //     { x: 3, y: 1 },
-  //     { x: 4, y: 1 },
-  //     { x: 5, y: 1 },
-  //   ],
-  // },
-  // {
-  //   type: "CRUISER",
-  //   positions: [
-  //     { x: 3, y: 4 },
-  //     { x: 3, y: 5 },
-  //     { x: 3, y: 6 },
-  //   ],
-  // },
+  {
+    type: "CARRIER",
+    positions: [
+      { x: 0, y: 0 },
+      { x: 0, y: 1 },
+      { x: 0, y: 2 },
+      { x: 0, y: 3 },
+      { x: 0, y: 4 },
+    ],
+  },
+  {
+    type: "BATTLESHIP",
+    positions: [
+      { x: 2, y: 1 },
+      { x: 3, y: 1 },
+      { x: 4, y: 1 },
+      { x: 5, y: 1 },
+    ],
+  },
+  {
+    type: "CRUISER",
+    positions: [
+      { x: 3, y: 4 },
+      { x: 3, y: 5 },
+      { x: 3, y: 6 },
+    ],
+  },
   {
     type: "SUBMARINE",
     positions: [

@@ -1,5 +1,5 @@
-import { baseTopic, client } from "../mqtt/game";
-import { publishMessage } from "../mqtt/PublishMessage";
+import { baseTopic, client } from "../core/mqtt/game";
+import { publishMessage } from "../core/mqtt/PublishMessage";
 import { getUserInfo } from "./UserInfoMock";
 
 const giveUpBtn = document.getElementById("give-up-button");

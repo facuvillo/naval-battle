@@ -1,4 +1,4 @@
-import '../../styles.css'
+import '../styles.css'
 
 export const currentGameCard = (userName) => {
     return `

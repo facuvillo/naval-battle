@@ -1,12 +1,12 @@
-import { getCurrentGames } from "./games/http/GetCurrentGames.js";
-import { createGame } from "./games/http/CreateGame.js";
-import { getUserInfo, setCurrentTopicBase } from "./games/gameLogic/UserInfoMock.js";
-import { joinGame } from "./games/http/joinGame.js";
-import { getOnlinePlayers } from "./games/http/GetOnlinePlayers.js";
-import { publishMessage } from "./games/mqtt/PublishMessage.js";
-import { baseTopic, client } from "./games/mqtt/game.js";
-import { subscribeTopic } from "./games/mqtt/suscribeTopic.js";
-import { currentGameCard } from "./games/gameLogic/gameCard.js";
+import { getCurrentGames } from "../core/http/GetCurrentGames.js";
+import { createGame } from "../core/http/CreateGame.js";
+import { getUserInfo, setCurrentTopicBase } from "../gameLogic/UserInfoMock.js";
+import { joinGame } from "../core/http/joinGame.js";
+import { getOnlinePlayers } from "../core/http/GetOnlinePlayers.js";
+import { publishMessage } from "../core/mqtt/PublishMessage.js";
+import { baseTopic, client } from "../core/mqtt/game.js";
+import { subscribeTopic } from "../core/mqtt/suscribeTopic.js";
+import { currentGameCard } from "../gameLogic/gameCard.js";
 
 const btnRefresh = document.getElementById("refreshGames");
 const availableGamesHTML = document.getElementById("games-cards-container");
@@ -24,22 +24,22 @@ const setCurrentGames = async () => {
     const currentGames = await getCurrentGames();
     currentGames.forEach(game => {
         availableGamesHTML.innerHTML += currentGameCard(game.payerUsername);
-        /*
         const gameElement = document.createElement("div");
-        gameElement.className = "cards";
-        gameElement.innerHTML = `
-            <img src="../assets/astronaut.png" width="60px" height="60px" alt="astronaut-image">
-            <h3>${game.playerUsername}</h3>
-            <p>${game.playerUserId}</p>
-            <button id="joinGameBtn" class="btn-accept">Unirse</button>
-        `;
-        */
+        // gameElement.className = "cards";
+        // gameElement.innerHTML = `
+        //     <img src="../assets/astronaut.png" width="60px" height="60px" alt="astronaut-image">
+        //     <h3>${game.playerUsername}</h3>
+        //     <p>${game.playerUserId}</p>
+        //     <button id="joinGameBtn" class="btn-accept">Unirse</button>
+        // `;
         const joinBtn = gameElement.querySelector("#joinGamebtn");
         joinBtn.addEventListener("click", async () => {
           try {
+            console.log("HOLA");
+            
             const response = await joinGame(game.gameId);
             setCurrentTopicBase(game.gameId)
-            window.location.href = "../game.html";
+            window.location.href = "../../game.html";
           } catch (error) {
             console.error("Error al unirse al juego:", error);
           }

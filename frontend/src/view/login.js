@@ -1,6 +1,6 @@
 import axios from "axios";
-import errorAnimation from "./errorAnimation.js";
-import { getUserInfo, setUserInfo, userInfoMock } from "./games/gameLogic/UserInfoMock.js";
+import errorAnimation from "../utils/errorAnimation.js";
+import { getUserInfo, setUserInfo, userInfoMock } from "../gameLogic/UserInfoMock.js";
 
 const inputEmail = document.getElementById("inputEmailLogin");
 const inputPassword = document.getElementById("inputPasswordLogin");
